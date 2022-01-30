@@ -4,10 +4,9 @@ using namespace std;
 class Solution {
 public:
   bool canJump(vector<int>& nums) {
-    int size = nums.size();
-    int goodIndex = size-1;
+    int goodIndex = nums.size()-1;
 
-    for(int i=size-2; i>=0; i--){
+    for(int i=nums.size()-2; i>=0; i--){
       if(i+nums[i] >= goodIndex){
         goodIndex = i;
       }
